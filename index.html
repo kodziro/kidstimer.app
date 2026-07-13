@@ -1,34 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kids Timer App – Visual Timer for Kids</title>
-  <meta name="description" content="Kids Timer is a simple, fun, and visual countdown timer for children. Available in the App Store" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    const ios = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-    const android = /android/i.test(userAgent);
-
-    window.onload = function () {
-      const appScheme = "https://apps.apple.com/app/apple-store/id1537955071?pt=118868513&ct=kidstimerapp&mt=8"; // custom URL scheme yourapp://
-      const iosStore = "https://apps.apple.com/app/apple-store/id1537955071?pt=118868513&ct=kidstimerapp&mt=8"; // replace with your real App Store link
-      const androidStore = "https://apps.apple.com/app/apple-store/id1537955071?pt=118868513&ct=kidstimerapp&mt=8"; // replace with your Play Store link
-
-      const now = Date.now();
-      setTimeout(function () {
-        if (Date.now() - now < 2000) {
-          window.location.href = ios ? iosStore : androidStore;
-        }
-      }, 1500);
-
-      window.location = appScheme;
-    };
-  </script>
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="7370008c-329b-423d-bc8f-f17858c65492"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual Timer for Kids — Free Visual Countdown Timer App for iPhone &amp; iPad</title>
+<meta name="description" content="Visual Timer for Kids turns time into a picture kids can see. The free visual countdown timer app for toddlers, ADHD &amp; autism routines, homework, screen time and the classroom. 4.6★ on the App Store.">
+<link rel="canonical" href="https://kidstimer.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Visual Timer for Kids — See Time, Not Just Numbers">
+<meta property="og:description" content="A picture is slowly revealed as time counts down — so kids finally understand what “5 more minutes” means. Free on the App Store.">
+<meta property="og:url" content="https://kidstimer.app/">
+<meta property="og:image" content="https://kidstimer.app/assets/screenshot-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Asset fallback: if local files in assets/ are missing, load the official icon
+   and screenshots straight from Apple's CDN via the public iTunes lookup API.
+   Self-hosted files (fetch_assets.py) always win when present. */
+(function(){
+  var pending=[], data=null, requested=false, done=false;
+  function finish(img,kind){
+    if(kind==='icon'){ img.outerHTML='<span class="dot">⏱</span>'; }
+    else { var f=img.closest('.shot'); if(f) f.style.display='none'; }
+  }
+  function apply(){
+    pending.forEach(function(p){
+      var img=p[0], kind=p[1], i=p[2], url=null;
+      if(data){
+        if(kind==='icon') url=data.artworkUrl512||data.artworkUrl100;
+        else url=(data.screenshotUrls||[])[i-1];
+      }
+      if(url){ img.onerror=function(){finish(img,kind)}; img.src=url; img.style.visibility=''; }
+      else finish(img,kind);
+    });
+    pending=[];
+  }
+  window.__vtk=function(json){ done=true; data=(json.results&&json.results[0])||null; apply(); };
+  window.vtkMiss=function(img,kind,i){
+    img.style.visibility='hidden';
+    pending.push([img,kind,i]);
+    if(done){ apply(); return; }
+    if(!requested){
+      requested=true;
+      var s=document.createElement('script');
+      s.src='https://itunes.apple.com/lookup?id=1537955071&country=us&callback=__vtk';
+      s.onerror=function(){ done=true; apply(); };
+      document.head.appendChild(s);
+      setTimeout(function(){ if(!done){ done=true; apply(); } }, 6000);
+    }
+  };
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Visual Timer for Kids",
+  "operatingSystem": "iOS 17.6 or later, iPadOS 17.6 or later",
+  "applicationCategory": "EducationalApplication",
+  "description": "Visual countdown timer app for children. A picture is slowly revealed as time passes, helping kids understand time during homework, screen time, tooth brushing, chores and daily routines. Helpful for kids with ADHD and autism.",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "1400"},
+  "author": {"@type": "Person", "name": "Natalia Jakubczyk-Gajewska"},
+  "installUrl": "https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071",
+  "screenshot": "https://kidstimer.app/assets/screenshot-1.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is a visual timer for kids?","acceptedAnswer":{"@type":"Answer","text":"A visual timer shows time passing as something a child can see instead of numbers on a clock. In Visual Timer for Kids, a picture is gradually revealed as the countdown runs, so even toddlers who can't tell time understand how much is left."}},
+    {"@type":"Question","name":"Is a visual timer good for kids with ADHD?","acceptedAnswer":{"@type":"Answer","text":"Yes. Visual timers make remaining time concrete, which helps children with ADHD who experience time blindness. The visible progress, gentle music and a clear 3-2-1 ending signal support focus and calmer transitions."}},
+    {"@type":"Question","name":"Does a visual timer help autistic children with transitions?","acceptedAnswer":{"@type":"Answer","text":"Visual countdown timers are a widely used visual support for autistic children. Seeing exactly how much time remains makes transitions predictable and reduces the anxiety of activities ending suddenly."}},
+    {"@type":"Question","name":"How do I end screen time without a tantrum?","acceptedAnswer":{"@type":"Answer","text":"Set a visual timer where your child can see it and let the timer be the one that says time is up. Because kids watch the picture being revealed, the end of screen time is expected rather than a surprise, which defuses most battles."}},
+    {"@type":"Question","name":"Is Visual Timer for Kids free?","acceptedAnswer":{"@type":"Answer","text":"Yes — the app is free to download and use on iPhone and iPad, with optional premium pictures, music and backgrounds available via in-app purchase. Family Sharing is supported."}},
+    {"@type":"Question","name":"Does the timer keep running if I leave the app?","acceptedAnswer":{"@type":"Answer","text":"Yes. Visual Timer for Kids works in the background and sends a notification and alert the moment time is up."}},
+    {"@type":"Question","name":"Can toddlers who can't read numbers use it?","acceptedAnswer":{"@type":"Answer","text":"That's exactly who it's designed for. No reading or number skills are needed — the shrinking cover and appearing picture do all the explaining for children as young as 2–3."}},
+    {"@type":"Question","name":"Can I use it as a 2-minute tooth brushing timer?","acceptedAnswer":{"@type":"Answer","text":"Yes. Set 2 minutes, pick a fun picture and let your child brush until the full image appears — the dentist-recommended two minutes, made visible."}},
+    {"@type":"Question","name":"Does it work for classrooms and centers?","acceptedAnswer":{"@type":"Answer","text":"Teachers use it on a classroom iPad for centers, clean-up, circle time and turn-taking. Early-childhood educators report children ask for the timer for their turn instead of fighting over toys."}},
+    {"@type":"Question","name":"Can I personalize the timer?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose from 200 kid-designed pictures, 25 backgrounds, 20 music themes and 10 end-of-timer sounds — or reveal your own photos from your library."}}
+  ]
+}
+</script>
 </head>
 <body>
-  <p>Opening Kids Timer App – Visual Timer for Kids</p>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="assets/icon.png" alt="Visual Timer for Kids app icon" width="36" height="36" onerror="vtkMiss(this,'icon',0)">
+      Visual Timer for Kids
+    </a>
+    <nav aria-label="Main">
+      <a href="#screenshots">Screenshots</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#guides">Guides</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Free on iPhone &amp; iPad</p>
+      <h1>The visual timer for kids that turns waiting into <span class="hl">watching a picture appear</span></h1>
+      <p class="lead">“Five more minutes” means nothing to a child — until they can see it. As the visual countdown runs, a picture is slowly revealed, so kids understand time, finish tasks and switch activities without the battle.</p>
+      <div class="row">
+        <a class="btn" href="https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071">⬇ Download free on the App&nbsp;Store</a>
+        <a class="btn ghost" href="#how-it-works">See how it works</a>
+      </div>
+      <p class="proof"><span class="stars" aria-hidden="true">★★★★★</span> 4.6 · 1,400+ App Store ratings · Ages 4+</p>
+      <p class="badge-note">Loved by parents of toddlers &amp; kids with ADHD or autism — and by teachers in real classrooms.</p>
+    </div>
+    <div class="reveal-stage" aria-hidden="true">
+      <div class="reveal">
+        <div class="scene"><img src="assets/demo.jpg" alt="" onerror="this.outerHTML='<span>🦁</span>'"></div>
+        <div class="cover"></div>
+        <div class="chip">Tidy-up time · 5:00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download" id="download">
+  <div class="wrap center">
+    <p class="eyebrow">Download</p>
+    <h2>Free to download. Ready in under a minute.</h2>
+    <p class="sub">No account, no reading skills required. Set a time, pick a picture, press start.</p>
+    <div class="dl-grid">
+      <div class="dl-card"><div class="big">Free</div><p>Download and use free, with optional premium pictures, music &amp; backgrounds. Family Sharing supported.</p></div>
+      <div class="dl-card"><div class="big">4.6 ★</div><p>Rated 4.6 out of 5 by more than 1,400 parents and teachers on the App Store.</p></div>
+      <div class="dl-card"><div class="big">14 languages</div><p>English, Spanish, French, German, Japanese, Arabic, Chinese and more — for iPhone, iPad and Apple&nbsp;Silicon Macs.</p></div>
+    </div>
+    <p style="margin-top:34px"><a class="btn" href="https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071">⬇ Get Visual Timer for Kids — Free</a></p>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="shots" id="screenshots">
+  <div class="wrap center">
+    <p class="eyebrow">Screenshots</p>
+    <h2>A kids countdown timer children actually want to watch</h2>
+    <p class="sub">200 kid-designed pictures, 25 backgrounds, 20 music themes, 10 time's-up sounds — or reveal your own photos.</p>
+  </div>
+  <div class="wrap">
+    <div class="shot-rail">
+      <figure class="shot"><img src="assets/screenshot-1.jpg" alt="Visual Timer for Kids app screenshot: picture slowly revealed as the countdown runs" loading="lazy" onerror="vtkMiss(this,'shot',1)"><figcaption>Watch the picture appear</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-2.jpg" alt="Kids visual countdown timer screenshot: choosing from 200 pictures designed for children" loading="lazy" onerror="vtkMiss(this,'shot',2)"><figcaption>200 pictures to choose from</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-3.jpg" alt="Visual timer app screenshot: setting the countdown time for a child's routine" loading="lazy" onerror="vtkMiss(this,'shot',3)"><figcaption>Set any time in seconds</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-4.jpg" alt="Visual Timer for Kids screenshot: music themes and sound effects for the timer" loading="lazy" onerror="vtkMiss(this,'shot',4)"><figcaption>Music &amp; fun sounds</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-5.jpg" alt="Countdown timer for kids screenshot: celebration when time is up" loading="lazy" onerror="vtkMiss(this,'shot',5)"><figcaption>Celebration when time's up</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-6.jpg" alt="Visual timer for toddlers screenshot: custom photo being revealed by the countdown" loading="lazy" onerror="vtkMiss(this,'shot',6)"><figcaption>Use your own photos</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-7.jpg" alt="Visual Timer for Kids on iPad in a classroom setting" loading="lazy" onerror="vtkMiss(this,'shot',7)"><figcaption>Great on iPad too</figcaption></figure>
+      <figure class="shot"><img src="assets/screenshot-8.jpg" alt="Visual countdown timer for children — additional app screenshot" loading="lazy" onerror="vtkMiss(this,'shot',8)"><figcaption>Made for little hands</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="wrap center">
+    <p class="eyebrow">How it works</p>
+    <h2>Three taps to calmer routines</h2>
+  </div>
+  <div class="wrap">
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Set the time</h3><p>Homework for 20 minutes, screen time for 15, tooth brushing for 2 — any duration, down to the second.</p></div>
+      <div class="step"><div class="n">2</div><h3>Pick a picture</h3><p>Choose one of 200 kid-designed pictures — or a photo of grandma, the dog, or Saturday's park trip — and it hides behind the timer.</p></div>
+      <div class="step"><div class="n">3</div><h3>Press start &amp; watch</h3><p>The picture is revealed as time passes. A 3-2-1 final countdown, a celebration and a friendly alert mark the end — even if the app is in the background.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDES -->
+<section id="guides" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap center">
+    <p class="eyebrow">Guides</p>
+    <h2>How families &amp; teachers use a visual timer</h2>
+    <p class="sub">Practical, step-by-step guides for the routines parents search for most.</p>
+  </div>
+  <div class="wrap">
+    <div class="guides-grid">
+      <a class="gcard" href="guides/visual-timer-for-adhd-kids.html"><span class="em">🧠</span><h3>Visual Timer for Kids with ADHD</h3><p>Beat “time blindness”: make homework, chores and transitions visible for ADHD brains.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/visual-timer-for-autism.html"><span class="em">🧩</span><h3>Visual Timer for Autism</h3><p>Use a countdown as a visual support for predictable, low-anxiety transitions.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/screen-time-timer-for-kids.html"><span class="em">📱</span><h3>End Screen Time Without Tantrums</h3><p>The screen-time timer routine that hands the “bad guy” role to the timer, not you.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/visual-timer-for-toddlers.html"><span class="em">🧸</span><h3>Visual Timer for Toddlers</h3><p>How 2–5 year olds who can't tell time learn waiting, sharing and “five more minutes”.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/homework-timer-for-kids.html"><span class="em">📚</span><h3>Homework Timer for Kids</h3><p>Focus sprints, breaks and a finish line your child can literally see.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/visual-timer-for-classroom.html"><span class="em">🏫</span><h3>Visual Timer for the Classroom</h3><p>Centers, clean-up, circle time and turn-taking with one iPad at the front of the room.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/tooth-brushing-timer-for-kids.html"><span class="em">🪥</span><h3>2-Minute Tooth Brushing Timer</h3><p>Make the dentist's two minutes fun: brush until the picture appears.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/morning-routine-timer-for-kids.html"><span class="em">🌅</span><h3>Morning Routine Timer</h3><p>Get dressed, eat, shoes on, out the door — on time, without nagging.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/bedtime-routine-timer-for-kids.html"><span class="em">🌙</span><h3>Bedtime &amp; Quiet Time Timer</h3><p>Wind-down countdowns that make lights-out expected instead of resisted.</p><span class="more">Read the guide →</span></a>
+      <a class="gcard" href="guides/teach-kids-the-concept-of-time.html"><span class="em">⏳</span><h3>Teach Kids the Concept of Time</h3><p>Why time is abstract for young children — and how to make it concrete at home.</p><span class="more">Read the guide →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="center">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions parents ask</h2>
+    </div>
+    <details><summary>What is a visual timer for kids?</summary><div>A visual timer shows time passing as something a child can <em>see</em> instead of numbers on a clock. In Visual Timer for Kids, a picture is gradually revealed as the countdown runs, so even toddlers who can't tell time understand how much is left. <a class="lm" href="guides/teach-kids-the-concept-of-time.html">Learn more →</a></div></details>
+    <details><summary>Is a visual timer good for kids with ADHD?</summary><div>Yes. Visual timers make remaining time concrete, which helps children with ADHD who experience "time blindness". The visible progress, gentle music and a clear 3-2-1 ending signal support focus and calmer transitions. <a class="lm" href="guides/visual-timer-for-adhd-kids.html">Learn more →</a></div></details>
+    <details><summary>Does a visual timer help autistic children with transitions?</summary><div>Visual countdowns are a widely used visual support for autistic children. Seeing exactly how much time remains makes transitions predictable and reduces the anxiety of activities ending suddenly. <a class="lm" href="guides/visual-timer-for-autism.html">Learn more →</a></div></details>
+    <details><summary>How do I end screen time without a tantrum?</summary><div>Set a visual timer where your child can see it and let <em>the timer</em> be the one that says time is up. The end of screen time becomes expected rather than a surprise, which defuses most battles. <a class="lm" href="guides/screen-time-timer-for-kids.html">Learn more →</a></div></details>
+    <details><summary>Can toddlers who can't read numbers use it?</summary><div>That's exactly who it's designed for. No reading or number skills needed — the shrinking cover and appearing picture do all the explaining for children as young as 2–3. <a class="lm" href="guides/visual-timer-for-toddlers.html">Learn more →</a></div></details>
+    <details><summary>Can I use it as a 2-minute tooth brushing timer?</summary><div>Yes. Set 2 minutes, pick a fun picture and let your child brush until the full image appears — the dentist-recommended two minutes, made visible. <a class="lm" href="guides/tooth-brushing-timer-for-kids.html">Learn more →</a></div></details>
+    <details><summary>Does it work for classrooms and daycare centers?</summary><div>Teachers run it on a classroom iPad for centers, clean-up, circle time and turn-taking. Early-childhood educators report children ask for the timer for their turn instead of fighting over toys. <a class="lm" href="guides/visual-timer-for-classroom.html">Learn more →</a></div></details>
+    <details><summary>Will it help with homework focus?</summary><div>Yes — short, visible work sprints with a picture as the finish line are one of the most effective homework structures for kids. <a class="lm" href="guides/homework-timer-for-kids.html">Learn more →</a></div></details>
+    <details><summary>Is Visual Timer for Kids free?</summary><div>Yes — free to download and use on iPhone and iPad, with optional premium pictures, music and backgrounds via in-app purchase. Family Sharing is supported. <a class="lm" href="#download">Download it here →</a></div></details>
+    <details><summary>Does the timer keep running if I leave the app?</summary><div>Yes. The timer works in the background and sends a notification and alert the moment time is up — so you can take the phone back and still get the "time's up" signal. <a class="lm" href="#how-it-works">See how it works →</a></div></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="get-started">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Make time something your child can see</h2>
+      <p>Join thousands of parents and teachers using Visual Timer for Kids for calmer mornings, easier homework and screen-time handoffs without tears.</p>
+      <a class="btn" href="https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071">⬇ Download free on the App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h3>Visual Timer for Kids</h3>
+        <p>A visual countdown timer app that reveals a picture as time passes — helping toddlers, school-age kids, and children with ADHD or autism understand time. By Natalia Jakubczyk-Gajewska.</p>
+        <p style="margin-top:12px"><a href="https://apps.apple.com/us/app/visual-timer-for-kids/id1537955071">Download on the App Store</a></p>
+      </div>
+      <div>
+        <h3>Guides</h3>
+        <ul>
+          <li><a href="guides/visual-timer-for-adhd-kids.html">ADHD visual timer</a></li>
+          <li><a href="guides/visual-timer-for-autism.html">Autism visual timer</a></li>
+          <li><a href="guides/screen-time-timer-for-kids.html">Screen time timer</a></li>
+          <li><a href="guides/visual-timer-for-toddlers.html">Toddler timer</a></li>
+          <li><a href="guides/visual-timer-for-classroom.html">Classroom timer</a></li>
+          <li><a href="guides/homework-timer-for-kids.html">Homework timer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="mailto:AppsForParents@gmail.com">Contact: AppsForParents@gmail.com</a></li>
+          <li><a href="https://sites.google.com/site/appsforparentsprivacy/">Privacy Policy</a></li>
+          <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+          <li><a href="guides/tooth-brushing-timer-for-kids.html">Tooth brushing timer</a></li>
+          <li><a href="guides/morning-routine-timer-for-kids.html">Morning routine timer</a></li>
+          <li><a href="guides/bedtime-routine-timer-for-kids.html">Bedtime timer</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2020–2026 Natalia Jakubczyk-Gajewska. Apple, the Apple logo and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
 </body>
 </html>
