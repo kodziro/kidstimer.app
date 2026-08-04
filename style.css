@@ -136,6 +136,7 @@ footer a:hover{color:var(--cta-deep);text-decoration:underline}
 .crumbs a{color:var(--ink-soft)}
 article.guide{max-width:760px;margin:0 auto;padding:28px 22px 70px}
 article.guide header{margin-bottom:26px}
+article.guide .byline{font-size:.87rem;color:var(--ink-soft);margin-top:10px}
 article.guide h1{font-size:clamp(1.9rem,4.5vw,2.7rem)}
 article.guide .answer{background:var(--sky);border-radius:var(--r);padding:22px 26px;font-size:1.08rem;font-weight:600;margin:26px 0}
 article.guide h2{margin:40px 0 14px}
@@ -144,6 +145,11 @@ article.guide p{margin:14px 0;color:#3b4b64}
 article.guide ul,article.guide ol{margin:14px 0 14px 24px;color:#3b4b64}
 article.guide li{margin:8px 0}
 article.guide .tip{border-left:5px solid var(--sun);background:#fff;border-radius:0 16px 16px 0;padding:16px 20px;margin:22px 0;box-shadow:var(--shadow)}
+article.guide .cmp{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+article.guide table{border-collapse:collapse;width:100%;min-width:660px;font-size:.92rem}
+article.guide th,article.guide td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+article.guide th{font-family:var(--display);background:var(--sky);white-space:nowrap}
+article.guide tr:last-child td{border-bottom:none}
 .guide-cta{background:var(--card);border:2px solid var(--sky-deep);border-radius:var(--r);padding:30px;text-align:center;margin:44px 0 10px}
 .guide-cta .proof{justify-content:center}
 .related{margin-top:40px}
