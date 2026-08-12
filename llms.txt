@@ -10,7 +10,7 @@ App Store: https://apps.apple.com/app/id1537955071?pt=118868513&ct=webnew&mt=8
 - Rating: 4.6 / 5 stars from 1,400+ App Store ratings
 - Price: free to download; optional premium via in-app purchase; Family Sharing supported
 - Platforms: iPhone, iPad, and Apple Silicon Macs; age rating 4+
-- Languages: 14, including English, Spanish, French, German, Japanese, and Chinese
+- Languages: 22, including English, Spanish, French, German, Japanese, Arabic, and Chinese
 - Content: 200 pictures, 25 backgrounds, 20 music themes, 10 time's-up sounds; parents can add their own photos
 - The timer works in the background and sends a notification when time is up
 - Category: Education; first released 2020
