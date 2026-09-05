@@ -4,7 +4,15 @@
   Loads the TelemetryDeck JavaScript SDK (@telemetrydeck/sdk, ES module, no
   dependencies) from jsDelivr at runtime and sends one signal per click on an
   own App Store link (app id 1537955071; competitor App Store links on the
-  comparison pages are ignored):  type "appstore-click", payload { page, position }.
+  comparison pages are ignored):  type "appstore-click",
+  payload { page, position, source, path, referrer }.
+
+  - source mirrors the Web SDK's "combinedSource" so clicks can be compared
+    with pageviews by source: the utm_source query parameter if present (e.g.
+    "chatgpt.com"), else the host of an external referrer (e.g.
+    "www.google.com"), else "none". path is the page path, referrer the raw
+    referrer host (may be kidstimer.app for internal navigation). No query
+    strings, no full URLs, nothing personal.
 
   - Pageviews are still sent by the separate Web SDK tag in <head>; this file
     does not touch them.
@@ -30,6 +38,21 @@
     if (guide) return 'guide-' + guide[1];
     var name = path.replace(/^.*\//, '').replace(/\.html$/, '');
     return name || 'home';
+  }
+
+  function referrerHost() {
+    try {
+      return document.referrer ? new URL(document.referrer).hostname : '';
+    } catch (e) { return ''; }
+  }
+
+  function source() {
+    var utm = '';
+    try { utm = new URLSearchParams(location.search).get('utm_source') || ''; } catch (e) {}
+    if (utm) return utm.toLowerCase().slice(0, 100);
+    var host = referrerHost();
+    if (host && host !== location.hostname) return host;
+    return 'none';
   }
 
   function randomId() {
@@ -75,8 +98,13 @@
     var position = link.getAttribute('data-umami-event-position') ||
       link.getAttribute('data-td-position') || 'other';
     try {
-      td.signal('appstore-click', { page: pageSlug(), position: position })
-        .catch(function () {});
+      td.signal('appstore-click', {
+        page: pageSlug(),
+        position: position,
+        source: source(),
+        path: location.pathname,
+        referrer: referrerHost() || 'none'
+      }).catch(function () {});
     } catch (e) {}
   });
 })();
