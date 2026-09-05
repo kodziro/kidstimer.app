@@ -155,3 +155,23 @@ article.guide tr:last-child td{border-bottom:none}
 .related{margin-top:40px}
 .related ul{list-style:none;margin-left:0}
 .related li{margin:10px 0}
+
+/* ------- comparison page table (stays a real <table>; cards under 700px) ------- */
+.compare-wrap{width:min(1040px,calc(100vw - 44px));margin:1.4em 0 1.4em calc(50% - min(520px,50vw - 22px))}
+article.guide table.compare{border-collapse:separate;border-spacing:0;width:100%;min-width:0;table-layout:fixed;font-size:.8rem;line-height:1.35;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+article.guide table.compare th,article.guide table.compare td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;color:#3c4a66;overflow-wrap:anywhere;white-space:normal}
+article.guide table.compare thead th{font-family:var(--display);font-weight:700;color:var(--ink);background:var(--sky);hyphens:auto}
+article.guide table.compare thead th:first-child,article.guide table.compare tbody th{width:16%}
+article.guide table.compare tbody th{font-weight:800;color:var(--ink);background:none}
+article.guide table.compare tbody tr:last-child th,article.guide table.compare tbody tr:last-child td{border-bottom:0}
+@media (max-width:699px){
+  .compare-wrap{width:auto;margin:1.4em 0}
+  article.guide table.compare{display:block;background:none;border:0;box-shadow:none;font-size:.9rem;overflow:visible}
+  article.guide table.compare thead{display:none}
+  article.guide table.compare tbody,article.guide table.compare tr{display:block}
+  article.guide table.compare tr{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+  article.guide table.compare tbody th{display:block;width:auto;font-family:var(--display);font-size:1.05rem;padding:14px 16px;background:var(--sky)}
+  article.guide table.compare td{display:grid;grid-template-columns:9.5em 1fr;gap:8px;padding:9px 16px}
+  article.guide table.compare td::before{content:attr(data-label);font-weight:800;color:var(--ink)}
+}
+.table-note{font-size:.86rem;color:var(--ink-soft)}
