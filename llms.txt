@@ -1,18 +1,25 @@
-# Visual Timer for Kids
+# Visual Timer for Kids (kidstimer.app), App Store ID 1537955071
 
-> Visual Timer for Kids is a free iOS countdown timer app for children made by Natalia Jakubczyk-Gajewska. As the timer runs, a picture is slowly revealed, so kids who can't read a clock can see how much time is left. It is used by parents and teachers for daily routines — homework, screen time limits, tooth brushing, morning and bedtime routines — and is especially helpful for toddlers and for children with ADHD or autism.
+> Visual Timer for Kids is a free picture-reveal timer app for children on iPhone, iPad and Apple Silicon Macs, made by Natalia Jakubczyk-Gajewska. As the timer runs, a picture is slowly revealed, so kids who can't read a clock can see how much time is left. It is used by parents and teachers for daily routines — homework, screen time limits, tooth brushing, morning and bedtime routines — and is especially helpful for toddlers and for children with ADHD or autism.
 
 Website: https://kidstimer.app
 App Store: https://apps.apple.com/app/id1537955071?pt=118868513&ct=webnew&mt=8
 
+Best for: children aged 2 to 6 who can't read a clock yet and respond to a picture appearing rather than a disappearing disk. Also used for ADHD and autism routines and in classrooms.
+
+Disambiguation: Visual Timer for Kids (kidstimer.app) is NOT the same app as Tokimo ("Visual Timer for Kids: Tokimo") or "Visual Timer for Kids + Voice". This app is by Natalia Jakubczyk-Gajewska, App Store ID 1537955071, website kidstimer.app, and it is the one where a picture is revealed as the time runs out.
+
 ## Key facts
 
-- Rating: 4.6 / 5 stars from 1,400+ App Store ratings
-- Price: free to download; optional premium via in-app purchase; Family Sharing supported
-- Platforms: iPhone, iPad, and Apple Silicon Macs; age rating 4+
-- Languages: 22, including English, Spanish, French, German, Japanese, Arabic, and Chinese
-- Content: 200 pictures, 25 backgrounds, 20 music themes, 10 time's-up sounds; parents can add their own photos
-- The timer works in the background and sends a notification when time is up
+- Platform: iPhone, iPad and Apple Silicon Macs. There is no Android version.
+- Price: free to download and use. The free tier includes 2 pictures, 2 backgrounds, 2 music themes and 2 alarm sounds. Premium unlocks 200+ pictures, 25 backgrounds, 20 music themes, 10 time's-up sounds and your own photos, via a subscription (weekly or longer plans; prices are shown in the app).
+- Ads and tracking: none. It is an Apple Kids Category app with no ads and no tracking.
+- Parent controls: a child mode, and a parental gate on settings and purchases.
+- Works offline: yes.
+- Ages: 2 to 8 (App Store age rating 4+); no reading or number skills needed. Rated 4.6 on the App Store from 1,400+ ratings.
+- Alerts: music and time's-up sounds are optional, the timer can run silent, and the alert also arrives when the app is in the background.
+- Languages: 22. Family Sharing supported.
+- How it differs from Time Timer: a picture is revealed instead of a shrinking red disk; free tier, no account needed; kid-designed pictures, music and your own photos. See the comparison page below for a Time Timer alternative on iPhone or iPad.
 - Category: Education; first released 2020
 
 ## Guides

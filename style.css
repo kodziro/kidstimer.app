@@ -74,6 +74,19 @@ section{padding:74px 0}
 .reveal .chip{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;padding:8px 20px;border-radius:999px;font-size:1rem;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.reveal .cover{animation:none;--sweep:70%}}
 
+/* at a glance (fact box) */
+.glance{padding:56px 0 30px}
+.glance h2{margin-bottom:12px}
+.glance .best-for{color:var(--ink-soft);margin-bottom:22px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:.98rem}
+.facts dt{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf);padding:12px 18px 0}
+.facts dd{color:var(--ink-soft);padding:3px 18px 12px;border-bottom:1px solid var(--line)}
+.facts dd:last-of-type{border-bottom:0}
+@media(min-width:640px){.facts{display:grid;grid-template-columns:170px 1fr}.facts dt{padding:12px 18px;border-bottom:1px solid var(--line)}.facts dt:last-of-type{border-bottom:0}.facts dd{padding:12px 18px 12px 0}}
+.glance h3{margin-top:34px}
+.differs{margin:10px 0 14px 22px;color:var(--ink-soft)}
+.differs-note{color:var(--ink-soft);font-size:.95rem}
+
 /* download */
 .download{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
