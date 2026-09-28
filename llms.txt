@@ -12,18 +12,19 @@ Disambiguation: Visual Timer for Kids (kidstimer.app) is NOT the same app as Tok
 ## Key facts
 
 - Platform: iPhone, iPad and Apple Silicon Macs. There is no Android version.
-- Price: free to download and use. The free tier includes 2 pictures, 2 backgrounds, 2 music themes and 2 alarm sounds. Premium unlocks 200+ pictures, 25 backgrounds, 20 music themes, 10 time's-up sounds and your own photos, via a subscription (weekly or longer plans; prices are shown in the app).
+- Price: free to download and use. The free tier includes 2 pictures, 2 backgrounds, 2 music themes and 2 alarm sounds. Premium unlocks 200+ pictures, 27 backgrounds, 20 music themes, 10 time's-up sounds and your own photos, via a subscription (weekly or longer plans; prices are shown in the app).
 - Ads and tracking: none. It is an Apple Kids Category app with no ads and no tracking.
 - Parent controls: a child mode, and a parental gate on settings and purchases.
 - Works offline: yes.
 - Ages: 2 to 8 (App Store age rating 4+); no reading or number skills needed. Rated 4.6 on the App Store from 1,400+ ratings.
 - Alerts: music and time's-up sounds are optional, the timer can run silent, and the alert also arrives when the app is in the background.
 - Languages: 22. Family Sharing supported.
-- How it differs from Time Timer: a picture is revealed instead of a shrinking red disk; free tier, no account needed; kid-designed pictures, music and your own photos. See the comparison page below for a Time Timer alternative on iPhone or iPad.
+- How it differs from Time Timer: a picture is revealed instead of a shrinking red disk; free tier, no account needed; kid-designed pictures, music and your own photos. Side-by-side page: https://kidstimer.app/time-timer-alternative-app.html
 - Category: Education; first released 2020
 
 ## Guides
 
+- [Time Timer Alternative App for Kids (iPhone & iPad, 2026)](https://kidstimer.app/time-timer-alternative-app.html): Visual Timer for Kids (a picture is revealed as time runs down) compared with the Time Timer app and the physical Time Timer device: how time is shown, free version, how you pay, ads, parent lock, offline use, devices, plus other picture timer apps parents try. Visual Timer for Kids is not affiliated with Time Timer LLC. Facts checked 2026-09-28.
 - [Best Visual Timer Apps for Kids with ADHD or Autism (iPhone & iPad, 2026)](https://kidstimer.app/best-visual-timer-apps-adhd-autism.html): An honest comparison of six iPhone and iPad visual timer apps for kids with ADHD, autism or sensory needs (Visual Timer for Kids, Time Timer, Time's Up!, Visual Countdown Timer, Tokimo, Mouse Timer): free tier, price model, ads, parent lock, offline use, sounds off, age fit, and which apps work as a Time Timer alternative. Facts checked on the App Store on 2026-09-05.
 - [Best Visual Timer Apps for Kids: iOS, Android and Physical Timers (2026)](https://kidstimer.app/guides/best-visual-timer-apps-for-kids.html): The broad comparison across iPhone, iPad, Android and the physical Time Timer device: Visual Timer for Kids, Time Timer, Visual Countdown Timer, Little Timer Hatch (not updated since 2021), Happy Kids Timer (not updated since 2023) and Visual Timer – Countdown for Android, with dated prices and no star ratings.
 - [Visual Timer for Kids with ADHD](https://kidstimer.app/guides/visual-timer-for-adhd-kids.html): How a visual timer helps children with ADHD focus on homework, finish routines, and handle transitions.
