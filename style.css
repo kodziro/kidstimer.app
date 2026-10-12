@@ -135,13 +135,17 @@ section{padding:74px 0}
 
 /* footer */
 footer{padding:54px 0 40px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.93rem}
-.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+@media(max-width:960px){.f-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.f-grid{grid-template-columns:1fr}}
 footer h3{font-size:1rem;margin-bottom:12px;color:var(--ink)}
 footer ul{list-style:none}
 footer li{margin:7px 0}
 footer a{color:var(--ink-soft);text-decoration:none}
 footer a:hover{color:var(--cta-deep);text-decoration:underline}
+.f-more{margin-bottom:18px}
+.f-more li{display:inline-block;margin:4px 12px}
+@media(max-width:760px){.f-more li{display:block;margin:7px 0}}
 .legal{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:.84rem}
 
 /* ------- guide article pages ------- */

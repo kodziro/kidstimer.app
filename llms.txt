@@ -38,6 +38,12 @@ Disambiguation: Visual Timer for Kids (kidstimer.app) is NOT the same app as Tok
 - [Bedtime Routine Timer for Kids](https://kidstimer.app/guides/bedtime-routine-timer-for-kids.html): Using a visual bedtime timer for wind-down, quiet time, and lights-out that kids accept.
 - [How to Teach Kids the Concept of Time](https://kidstimer.app/guides/teach-kids-the-concept-of-time.html): How children ages 2–8 develop time sense, and simple ways to make invisible time concrete.
 
+## Related tools by the same maker
+
+- [First Then Board](https://first-then.app/): a free web First-Then board (one task, then the reward); runs in the browser, no account, printable.
+- [Visual Schedule](https://visual-schedule.app/): an iPhone, iPad and Mac app that shows a child's day as pictures, icons and timers; free to download.
+- [Token Board: ABA Reward Chart](https://token-board.app/): a token board and reward chart app for iPhone, iPad and Mac; free to download, with optional Token Board Plus.
+
 ## Support
 
 - Email: AppsForParents@gmail.com

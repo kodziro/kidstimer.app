@@ -1,11 +1,18 @@
 /*
-  TelemetryDeck "appstore-click" signal for kidstimer.app.
+  TelemetryDeck "appstore-click" and "crosslink-click" signals for kidstimer.app.
 
   Loads the TelemetryDeck JavaScript SDK (@telemetrydeck/sdk, ES module, no
   dependencies) from jsDelivr at runtime and sends one signal per click on an
   own App Store link (app id 1537955071; competitor App Store links on the
   comparison pages are ignored):  type "appstore-click",
   payload { page, position, source, path, referrer }.
+
+  A click on a link to one of our other sites (the link has data-out) sends
+  type "crosslink-click", payload { page, position, target, source, path,
+  referrer }. target = data-out: "first-then" (first-then.app),
+  "visual-schedule" (visual-schedule.app) or "token-board" (token-board.app);
+  any other value sends nothing. position = data-td-position on the link.
+  These links carry no Umami attributes.
 
   - source mirrors the Web SDK's "combinedSource" so clicks can be compared
     with pageviews by source: the utm_source query parameter if present (e.g.
@@ -27,6 +34,7 @@
 (function () {
   var APP_ID = 'C8069B87-B2F9-4171-A86E-90D5F369254D';
   var SDK_URL = 'https://cdn.jsdelivr.net/npm/@telemetrydeck/sdk@2.0.4/dist/telemetrydeck.js';
+  var CROSSLINK_TARGETS = { 'first-then': 1, 'visual-schedule': 1, 'token-board': 1 };
   var td = null;
 
   function pageSlug() {
@@ -93,6 +101,22 @@
   document.addEventListener('click', function (ev) {
     var target = ev.target;
     if (!target || !target.closest || !td) return;
+    var cross = target.closest('a[data-out]');
+    if (cross) {
+      var out = cross.getAttribute('data-out');
+      if (!CROSSLINK_TARGETS[out]) return;
+      try {
+        td.signal('crosslink-click', {
+          page: pageSlug(),
+          position: cross.getAttribute('data-td-position') || 'other',
+          target: out,
+          source: source(),
+          path: location.pathname,
+          referrer: referrerHost() || 'none'
+        }).catch(function () {});
+      } catch (e) {}
+      return;
+    }
     var link = target.closest('a[href*="id1537955071"]');
     if (!link) return;
     var position = link.getAttribute('data-umami-event-position') ||
